@@ -1,0 +1,33 @@
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+</head>
+<body>
+    <div class="container">
+
+<h2>Company Bankruptcy Prediction</h2>
+<form action="/predict" method="post">
+    <label for="Net Proft">Net Profit / Total Assets:</label>
+    <input type="text" id="net profit" name="net proft" required><br><br>
+
+    <label for="working capital">Working Capital / Total Assets:</label>
+    <input type="text" id="working capital" name="working capital" required><br><br>
+
+    <label for="sales">Sales / Total Assets:</label>
+    <input type="text" id="sales" name="sales" required><br><br>
+
+    <label for="equity">Equity / Total Assets:</label>
+    <input type="text" id="equity" name="equity" required><br><br>
+
+    <label for="gross profit">Gross Profit / Sales:</label>
+    <input type="text" id="gross profit" name="gross profit" required><br><br>
+
+    <label for="net profit">Net Profit / Sales:</label>
+    <input type="text" id="net profit" name="net profit" required><br><br>
+
+<form action="/predict bankruptcy" method="post">
+    <input type="submit" value="Predict bankruptcy">
+</form>
+<h3>{{ prediction_text }}</h3>
+</div>
+</body>
